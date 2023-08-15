@@ -22,6 +22,7 @@ while getopts ":a:" opt; do
     case $opt in
         a)
             MODEL="all"
+            shift
             ;;
         *) 
             usage

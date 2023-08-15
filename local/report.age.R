@@ -35,4 +35,10 @@ report.age <- function(lh_file, rh_file, model_type = "") {
 
 args = commandArgs(trailingOnly=TRUE)
 
-report.age(args[1], args[2], args[3])
+if (length(args) == 3) {
+  model = args[3]
+} else {
+  model = ""
+}
+
+report.age(args[1], args[2], model)
